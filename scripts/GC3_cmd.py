@@ -29,7 +29,7 @@ with open(arg.ascii_file) as file:
 	if arg.function=="window":
 		GC3_output = calc_coverage_int(file, start_position=int(arg.start), end_position=int(arg.end), molecule=arg.molecule, interval=int(arg.interval), jump=int(arg.step))
 	elif arg.function=="mean":
-		GC3_output = mean_coverage(file, start_position=int(arg.start), end_position=int(arg.end), molecule=arg.molecule)
+		GC3_output = mean_coverage(file, start=int(arg.start), end=int(arg.end), molecule=arg.molecule)
 
 with open(arg.output, 'a') as output1:
 	output1.write(f"{file_name}, {GC3_output} \n")
